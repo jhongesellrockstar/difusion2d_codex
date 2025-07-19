@@ -1,0 +1,28 @@
+🆕 Secciones reforzadas con tus fuentes:
+1. Introducción
+Mencionar la importancia histórica (Crank).
+
+Explicar las limitaciones del BTCS y métodos implícitos en laptops modestasdehghan1999.
+
+2. Fundamento físico y matemático
+Derivación desde la ecuación de continuidad y Ley de Fickheat.
+
+Presentar ecuación ∂u/∂t = D(∂²u/∂x² + ∂²u/∂y²) como caso 2D.
+
+3. Métodos Numéricos
+Definir claramente FTCS, 9-point, (1,13) con fórmulas y condiciones de estabilidaddehghan2002.
+
+Justificar la elección de métodos explícitos por eficiencia en hardware modesto.
+
+4. Implementación computacional
+Mostrar cómo cada esquema se implementa en Python, con comparaciones de complejidad computacional (inspirado en lo que Dehghan discute sobre CPU time).
+
+5. Resultados
+Comparar resultados en cuanto a precisión, tiempo y memoria.
+
+Discusión de ventajas del método (1,13) si deseas mostrar uso avanzado.
+
+6. Discusión y trabajos futuros
+Proponer soluciones con ML o métodos implícitos para hardware con mayor capacidad (basado en [2104.06455v1]).
+
+Mencionar posibles mejoras con condiciones de frontera no locales (como en Dehghan 1999).
