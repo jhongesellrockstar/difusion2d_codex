@@ -1,0 +1,40 @@
+📄 1. Qué es la ecuación de difusión 2D
+1.1. Fully explicit finite-difference methods for two-dimensional diffusion…
+Técnicas explícitas en diferencias finitas para la ecuación de difusión 2D, comparando estabilidad y precisión:
+. Excelente para comprender la formulación y limitaciones del método FTCS en dos dimensiones.
+https://www.sciencedirect.com/science/article/abs/pii/S0362546X00001723?utm_source=chatgpt.com
+https://arxiv.org/abs/2104.06455?utm_source=chatgpt.com
+
+
+1.2. The Diffusion Equation (material docente universitario)
+Incluye derivación de la ecuación ∂u/∂t = D(∂²u/∂x² + ∂²u/∂y²), esquema FTCS (explícito), BTCS (implícito) y ADI. Muy útil como base pedagógica y comparativa numérica:
+https://www.uni-muenster.de/imperia/md/content/physik_tp/lectures/ws2016-2017/num_methods_i/heat.pdf?utm_source=chatgpt.com
+https://www-eng.lbl.gov/~shuman/NEXT/MATERIALS%26COMPONENTS/Xe_damage/Crank-The-Mathematics-of-Diffusion.pdf?utm_source=chatgpt.com
+
+🛠️ 2. Métodos explícitos e implícitos
+🟢 Explícitos
+
+    FTCS en 2D: visto en el recurso anterior, incluye amplificación y condición de estabilidad ∆t ≤ ∆x²/(4D)
+    sciencedirect.com+11uni-muenster.de+11itp.uni-frankfurt.de+11
+    .
+
+🔴 Implícitos
+
+    Fully implicit finite differences methods for two-dimensional diffusion … 
+    Artículo en ScienceDirect que analiza métodos implícitos “fully implicit” para la ecuación de difusión 2D (BTCS)    .
+    https://www.sciencedirect.com/science/article/pii/S0377042799000655?utm_source=chatgpt.com
+
+
+    Además, el enfoque ADI (Alternating Direction Implicit), más eficiente y estable, está detallado tanto en el material universitario
+    engineeringletters.com+15uni-muenster.de+15sciencedirect.com+15
+    como en revisiones históricas en Numerische Mathematik
+    engineeringletters.com+15en.wikipedia.org+15sciencedirect.com+15
+    .
+
+
+
+
+
+
+
+

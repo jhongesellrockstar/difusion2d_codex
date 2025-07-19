@@ -1,0 +1,60 @@
+✍️ Estructura del proyecto (en 3 semanas)
+📅 Semana 1: Fundamentos y prototipos
+
+    Revisión teórica rápida:
+
+        Qué es la ecuación de difusión 2D
+
+        Métodos explícitos e implícitos (nos centraremos en el explícito por simplicidad)
+
+    Desarrollo del código base:
+
+        Resolver ecuación de difusión 2D con diferencias finitas (versión secuencial)
+
+    Optimización inicial:
+
+        Vectorización con NumPy
+
+        Aplicación de @jit con Numba
+
+✅ Salida esperada: Animación o imágenes con matplotlib mostrando el comportamiento en el tiempo.
+📅 Semana 2: Paralelización y pruebas
+
+    Implementar paralelismo:
+
+        Con multiprocessing para separar la carga por filas, columnas o chunks
+
+        O con joblib (Parallel(n_jobs=2)), que es más fácil
+
+    Comparar tiempos:
+
+        Usar time.perf_counter() o timeit
+
+        Medir y graficar diferencias entre secuencial, NumPy, Numba y multiprocessing
+
+    Realizar animaciones o visualizaciones comparativas
+
+        matplotlib.animation o guardar imágenes como png/gif
+
+✅ Salida esperada: Gráficas comparativas de tiempo y eficiencia.
+📅 Semana 3: Redacción del artículo
+
+    Estructura del paper:
+
+        Introducción: importancia del modelado numérico y eficiencia computacional
+
+        Metodología: implementación de cada variante
+
+        Resultados: tiempos, precisión, escalabilidad
+
+        Discusión: pros/cons de cada enfoque
+
+        Conclusión y trabajos futuros
+
+    Formato académico:
+
+        Plantilla de conferencia o journal (IEEE, Elsevier, etc.)
+
+        Bibliografía con estilo APA o IEEE (Zotero o BibTeX)
+
+✅ Salida esperada: Manuscrito en LaTeX o Word, con figuras generadas por tu código.
