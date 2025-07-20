@@ -27,7 +27,7 @@ def run_solver(solver: Solver, nx: int, ny: int, dx: float, dy: float, dt: float
     return u, runtime
 
 
-def benchmark(nx: int = 101, ny: int = 101, dt: float = 1e-4, nt: int = 500,
+def benchmark(nx: int = 101, ny: int = 101, dt: float = 1e-6, nt: int = 1000,
               alpha: float = 1.0, visualize: bool = False) -> None:
     """Compare the available solvers on a moderate grid."""
     dx = dy = 1.0 / (nx - 1)
