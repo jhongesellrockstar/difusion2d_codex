@@ -1,0 +1,12 @@
+\section{Introducci\'on}
+La ecuaci\'on de difusi\'on en dos dimensiones modela la evoluci\'on temporal de una cantidad escalar $u(x,y,t)$ en un medio con coeficiente de difusi\'on $D$.  Puede escribirse como
+\begin{equation}
+    \frac{\partial u}{\partial t}=D\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}\right).
+\end{equation}
+Esta formulaci\'on surge de la combinaci\'on de la ley de Fick con la conservaci\'on de masa, y es fundamental en mec\'anica de fluidos para describir procesos de transporte de calor, contaminantes o cantidad de movimiento.
+
+Los m\'etodos num\'ericos para resolver esta ecuaci\'on han sido estudiados extensamente desde los trabajos pioneros de \citet{crank1975}.  Aunque los esquemas impl\'icitos garantizan estabilidad incondicional, en equipos modestos su costo computacional es elevado debido a la necesidad de resolver sistemas lineales en cada paso de tiempo.  Alternativamente, los m\'etodos expl\'icitos permiten actualizar los nodos de la malla mediante operaciones algebraicas simples, lo cual resulta atractivo para c\'odigos educativos y entornos de c\'omputo limitados.
+
+Este proyecto compara tres variantes expl\'icitas implementadas en Python: el esquema FTCS tradicional de cinco puntos, una extensi\'on de nueve puntos y el m\'etodo de trece puntos propuesto por \citet{dehghan2002}.  Nuestro objetivo es evaluar su eficiencia y precisi\'on sin recurrir a mallas ni solucionadores externos, de modo que el estudiante pueda replicar los c\'alculos y apreciar las diferencias de rendimiento.
+
+En las siguientes secciones se detalla la formulaci\'on de cada esquema, su implementaci\'on vectorizada y los experimentos comparativos realizados.
