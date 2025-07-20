@@ -1,0 +1,29 @@
+\section{M\'etodos num\'ericos}
+En esta secci\'on se describen tres esquemas expl\'icitos empleados para resolver la ecuaci\'on de difusi\'on en dos dimensiones. Sea $u_{i,j}^n$ la aproximaci\'on num\'erica de $u(x_i,y_j,t_n)$ con espaciamientos $\Delta x$, $\Delta y$ y paso temporal $\Delta t$. Denotamos $r_x=\alpha \Delta t/\Delta x^2$ y $r_y=\alpha \Delta t/\Delta y^2$.
+
+\subsection{FTCS}
+El esquema \emph{Forward Time Centered Space} actualiza cada nodo usando una plantilla de cinco puntos:
+\begin{equation}
+  u_{i,j}^{n+1} = u_{i,j}^n + r_x\bigl(u_{i+1,j}^n - 2 u_{i,j}^n + u_{i-1,j}^n\bigr)
+  + r_y\bigl(u_{i,j+1}^n - 2 u_{i,j}^n + u_{i,j-1}^n\bigr).
+\end{equation}
+Su estabilidad exige $r_x + r_y \le 1/2$.
+
+\subsection{Esquema de nueve puntos}
+\citet{dehghan2002} propuso extender la plantilla incluyendo las diagonales. Asumiendo $\Delta x = \Delta y = h$ y $r = \alpha \Delta t / h^2$, la f\'ormula queda
+\begin{equation}
+  u_{i,j}^{n+1} = (1-5 r) u_{i,j}^n + r\,(u_{i+1,j}^n + u_{i-1,j}^n + u_{i,j+1}^n + u_{i,j-1}^n)
+  + \tfrac{r}{4} (u_{i+1,j+1}^n + u_{i+1,j-1}^n + u_{i-1,j+1}^n + u_{i-1,j-1}^n).
+\end{equation}
+Este esquema es estable si $0 < r \le 1/4$.
+
+\subsection{Esquema $(1,13)$}
+Otra variante debida a \citet{dehghan2002} utiliza trece puntos, incorporando las cuatro diagonales y los vecinos a dos celdas de distancia:
+\begin{equation}
+\begin{split}
+  u_{i,j}^{n+1} = &\,(1-8 r) u_{i,j}^n + r\,(u_{i+1,j}^n+u_{i-1,j}^n+u_{i,j+1}^n+u_{i,j-1}^n) \\&
+  + \tfrac{r}{2}(u_{i+1,j+1}^n+u_{i+1,j-1}^n+u_{i-1,j+1}^n+u_{i-1,j-1}^n)\\&
+  + \tfrac{r}{2}(u_{i+2,j}^n+u_{i-2,j}^n+u_{i,j+2}^n+u_{i,j-2}^n).
+\end{split}
+\end{equation}
+Se mantiene la condici\'on de estabilidad $r \le 1/2$.
