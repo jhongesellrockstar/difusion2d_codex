@@ -1,17 +1,25 @@
 \documentclass[preprint]{elsarticle}
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
+
+\usepackage[utf8]{inputenc}    % Codificación de entrada
+\usepackage[T1]{fontenc}       % Codificación de salida para renderizar acentos
+\usepackage[spanish]{babel}    % Idioma principal
+\usepackage{graphicx}          % Figuras
+\usepackage{amsmath}           % Matemática avanzada
+\usepackage{hyperref}          % Hipervínculos
+\usepackage{caption}
+\journal{Instituto Navier Stokes}
 
 \begin{document}
 
 \begin{frontmatter}
 
-\title{T\'itulo del Art\'iculo}
+\title{Comparación de esquemas explícitos en Python para la ecuación de difusión 2D: análisis de precisión y rendimiento computacional}
 
-\author{Autor}
+\author{Jhon Gesell Villanueva Portella}
 
 \begin{abstract}
-Resumen del art\'iculo.
+La ecuación de difusión 2D es fundamental en la modelación de fenómenos físicos como el transporte de calor, la dinámica de contaminantes o la transferencia de masa. En este trabajo se implementan y comparan tres esquemas explícitos —FTCS, 9-puntos y (1,13)— para resolver la ecuación de difusión en dos dimensiones, utilizando Python puro con bibliotecas científicas como NumPy, Matplotlib y Numba. Se consideran condiciones de frontera de Dirichlet y una condición inicial tipo pulso Gaussiano, en una malla regular. Se evalúan el error cuadrático medio (\(L_2\)) y el tiempo de ejecución de cada esquema, resaltando las diferencias entre precisión y eficiencia. Los resultados muestran que el esquema (1,13) logra mayor precisión a costa de mayor tiempo de cómputo, mientras que FTCS es el más rápido pero menos preciso. Este análisis se orienta a contextos educativos y de bajo costo computacional, alineándose con la motivación de trabajos previos como los de Crank \cite{crank_diffusion}, Dehghan \cite{dehghan1999,dehghan2002}, y aplicaciones modernas en mecánica de fluidos computacional. Se concluye que Python, incluso en hardware modesto, permite experimentar con esquemas numéricos avanzados sin depender de herramientas comerciales o entornos complejos.
+
 \end{abstract}
 
 \end{frontmatter}
