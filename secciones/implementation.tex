@@ -1,0 +1,31 @@
+\section{Implementaci\'on}
+Las rutinas se programaron en Python puro apoy\'andose en tres bibliotecas
+esenciales: NumPy para el manejo vectorial de arreglos, Numba para acelerar
+los bucles m\'as costosos mediante JIT y Matplotlib para la generaci\'on de
+figuras.  No se emplearon paquetes especializados de elementos finitos ni
+solucionadores externos.
+
+El c\'odigo se organiza en la carpeta \texttt{scripts}.  Cada esquema se
+implementa en un m\'odulo separado\,: \texttt{difusion2d\_ftcs.py},
+\texttt{difusion2d\_9pt.py} y \texttt{difusion2d\_13pt.py}, que definen las
+funciones \texttt{solve\_ftcs\_2d}, \texttt{solve\_9point\_2d} y
+\texttt{solve\_13point\_2d}, respectivamente.  El archivo
+\texttt{utils.py} contiene rutinas comunes como la generaci\'on de un pulso
+Gaussiano y el c\'alculo del error L2, mientras que
+\texttt{visualization.py} ofrece utilidades para mostrar contornos o
+animaciones de la soluci\'on.  El script principal
+\texttt{main\_benchmark.py} ejecuta los tres solvers, mide su tiempo y puede
+visualizar el resultado del esquema de trece puntos.
+
+Los productos obtenidos (gr\'aficas y tablas de comparaci\'on) se guardan en la
+carpeta \texttt{resultados}.  Los archivos \LaTeX{} del art\'iculo residen en
+\texttt{secciones} y se ensamblan mediante \texttt{paper.tex} en el
+directorio ra\'iz.  Para reproducir el entorno se incluy\'o el archivo
+\texttt{environment\_NSI\_miniarticulo\_01.txt} que declara las dependencias
+principales.
+
+Todos los experimentos se ejecutaron en un entorno gestionado con Anaconda y
+Python~3.12 sobre hardware modesto (un port\'atil de cuatro n\'ucleos con
+8~GB~de RAM).  A pesar de estas limitaciones, la combinaci\'on de NumPy y
+Numba permiti\'o obtener tiempos de c\'omputo razonables para mallas
+intermedias, sin recurrir a bibliotecas nativas adicionales.
